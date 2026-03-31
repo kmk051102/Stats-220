@@ -8,7 +8,9 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 
 library(tidyverse)
 
-logged_data <- read_csv("stats 220(Responses) - Form responses 1.csv")
+csv_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSkcOHoppSOvVVghmTusa3hVYpM_62Niikohv6mT3-JrJL-jEE-rcmcGmbHc_dXOaL8aczNgJOx1ve9/pub?output=csv"
+
+logged_data <- read_csv(csv_url)
 
 latest_data <- logged_data %>%
   rename(
@@ -32,7 +34,6 @@ top_interaction <- latest_data %>%
   count(interaction, sort = TRUE) %>%
   slice(1) %>%
   pull(interaction)
-
 ```
 
 ```{css}
@@ -59,7 +60,15 @@ img {
 }
 
 ```
+## Instagram observational logging report
 
+This report summarises patterns in Instagram use and interaction based on the data collected through my Google Form.
+
+On average, respondents spent **`r round(mean_hours, 2)` hours** on Instagram.
+
+The most common type of post seen was **`r top_post`**.
+
+The most common way respondents interacted with a post they liked was **`r top_interaction`**.
 
 ```{r}
 ggplot(latest_data, aes(x = post_type)) +
@@ -82,3 +91,4 @@ ggplot(latest_data, aes(x = interaction)) +
   ) +
   theme_minimal()
 ```
+
