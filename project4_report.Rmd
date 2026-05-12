@@ -1,0 +1,36 @@
+---
+title: "Project 4"
+author: "Myungkyu Kang"
+output:
+  html_document:
+    self_contained: true
+---
+
+## Introduction
+
+The focus of my data collection for this project was Instagram use and user behaviour. I observed multiple instances of Instagram use over time by recording how many hours were spent on Instagram, what type of post appeared the most, and how a liked post was normally interacted with. This continued from my Project 2 Google Form, so I reused the same form rather than creating a completely new one. The questions were useful because they allowed me to collect both numerical data, such as hours spent on Instagram, and categorical data, such as post type and interaction behaviour.
+
+The data was mainly collected by myself through repeated observational logging. This helped keep the project focused on observing behaviour rather than asking broad opinion-based survey questions. For the visualisations, I decided to focus on variables that could help tell a clear story about Instagram behaviour. I used a bar chart to compare the most common post types because bar charts are useful for showing category counts. I used a line graph for average Instagram hours over time because the timestamp variable allowed me to show changes across dates. I also used a boxplot to compare hours spent on Instagram across different interaction types because it shows the spread of the data, not just one summary value.
+
+During the process, I had to clean the variable names and convert the timestamp into date-time values using lubridate. I also created summary data frames using functions such as mutate(), group_by(), summarise(), arrange(), and stringr functions. One thing that did not work well was trying to show too much information in one graph. Some plots became harder to read, so I chose simpler visualisations that supported the story more clearly.
+
+## Visual data story
+
+
+My visual data story can be viewed here:
+
+[What My Instagram Observations Reveal](https://github.com/kmk051102/Stats-220/blob/main/completed_visual_data_story.html)
+
+My visual data story demonstrates creativity through the way the visualisations, colour theme, and written explanations work together to present the data as a story rather than just separate charts. I used a consistent colour theme across the plots and the HTML page so that the final webpage felt more connected and polished. I also structured the story with clear sections, so the reader can move from understanding the data context, to seeing the main patterns, to thinking about what the patterns mean. The progressive reveal effect also helps make the webpage feel more interactive and supports the idea of reading through a visual story step by step. The creative part is not only the design, but also the decision to connect Instagram content exposure, time spent, and interaction behaviour into one overall story.
+
+## Learning reflection
+
+One important idea I learned from Module 4 is that visual communication is not just about making a graph look nice. A good visualisation needs to match the type of data being shown and the message being communicated. For example, a bar chart is useful for comparing categories, while a line graph is better for showing change over time. I also learned that colour should support the meaning of the graph rather than distract from it. Using a consistent colour palette across the plots and webpage made the visual data story feel more organised.
+
+I am more curious about exploring how data technologies can make visual stories more interactive. For example, I would like to learn more about interactive dashboards, animated visualisations, and ways to combine images with data. I am also interested in learning how websites can present data in a more engaging way without making the information confusing.
+
+## Appendix
+
+```{r file='data_visualisation.R', eval=FALSE, echo=TRUE}
+
+```
